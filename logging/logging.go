@@ -33,7 +33,7 @@ func init() {
 	multiWriter := io.MultiWriter(os.Stdout, fileLogger)
 	log.SetOutput(multiWriter)
 	InfoLogger = log.New(multiWriter, "", 0)
-	InfoLogger = log.New(multiWriter, "", 0)
+	ErrorLogger = log.New(multiWriter, "", 0)
 }
 
 func InitLoggers(logFilePath string) {
